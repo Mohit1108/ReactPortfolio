@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+
+:root {
+  --primary: #1c2b3a0a;
+  --orange: #fea55f;
+  --text: #607b96;
+  --dark: #010C15;
+
+  --white: #fff;
+  --border:#1E2D3D;
+
+}
+::-moz-selection {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+::selection {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+body {
+  background-color: #010c15;
+  font-family: "Fira Code";
+  color: var(--text);
+}
+
+.navbar-brand {
+  width: 250px;
+  font-size: 16px;
+  font-weight: 450;
+  line-height: 21px;
+  letter-spacing: 0em;
+  color: var(--text);
+}
+
+/* Footer */
+.main_footer {
+  position: fixed;
+  bottom: 0 !important;
+  border-top: 1px solid var(--border) !important;
+  background-color: var(--dark);
+  left: 0;
+  right: 0;
+}
+.Footer-brand {
+  margin: 0px 50px 0px 0px;
+}
+.main_header nav, .main_footer footer {
+  max-width: 1280px;
+  width: 100%;
+  margin: auto;
+  padding: 0;
+}
+.main_header {
+  width: 100%;
+  position: fixed;
+  top: 0 !important;
+  background-color: #010c15;
+  background-color: var(--dark);
+  border-bottom: 1px solid var(--border);
+  left: 0;
+  right: 0;
+}
+.BodyContainer {
+  max-width: 1280px;
+  margin: auto;
+  padding: 0px 30px;
+  width: 100%;
+}
+
+.navbar-nav .nav-item a {
+  border-left: 1px solid var(--border);
+
+  padding: 10px 30px !important;
+  text-align: center;
+  color: var(--text);
+}
+.firstBar .nav-item:last-child a {
+  border-right: 1px solid var(--border);
+}
+
+/* Sections Body  */
+.MainBody {
+  margin-top: 80px;
+}
+
+.heroSection .row {
+  height: 80vh;
+}
+
+.subTitle {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 24px;
+  letter-spacing: 0em;
+  color: #e5e9f0;
+}
+.Title {
+  font-size: 62px;
+  font-weight: 400;
+  line-height: 70px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--white);
+  margin-bottom: 0;
+}
+
+.subTitleBottom {
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 42px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--orange);
+}
+
+.codeHero pre {
+  background: transparent !important;
+  margin: 0;
+  line-height: 20px;
+  padding: 3px 0px !important;
+}

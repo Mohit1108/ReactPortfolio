@@ -121,3 +121,10 @@ body {
   line-height: 20px;
   padding: 3px 0px !important;
 }
+.sidebarAbout i{
+  font-size: 24px;
+}
+.sidebarAbout{
+  width: 70px !important;
+  border-right: 1px solid var(--border);
+}

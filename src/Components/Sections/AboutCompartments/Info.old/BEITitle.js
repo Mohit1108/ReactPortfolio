@@ -2,7 +2,16 @@ import React from "react";
 
 export default function BioInterestEducationTitle() {
   return (
-    <div className="accordion" id="accordionDetails">
+
+
+
+    <div
+        id="personalInfo"
+        className="accordion-collapse collapse show ps-4"
+        aria-labelledby="PersonalHeading"
+        data-bs-parent="#accordionExample"
+      >
+<div className="accordion" id="accordionDetails">
       <div className="accordion-item my-3 ">
         <h2 className="accordion-header" id="headingBio">
           <button
@@ -47,5 +56,9 @@ export default function BioInterestEducationTitle() {
         </h2>
       </div>
     </div>
+
+
+      </div>
+    
   );
 }

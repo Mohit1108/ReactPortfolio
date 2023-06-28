@@ -169,3 +169,96 @@ li.list-group-item {
 code {
   color: var(--text);
 }
+
+.infoTitle h3 {
+  
+  font-size: 16px;
+  padding: 10px 15px;
+}
+.infoTitle .list-group-item{
+  color: var(--text);
+}
+.infoTitle .list-group-item.active {
+  z-index: 0;
+  color:var(--white);
+  background-color: transparent;
+  border:none;
+  margin: 0px;
+}
+
+
+.infoTitle h3{
+  color: var(--text);
+  font-size: 16px;
+  margin: 0;
+  
+}
+
+.infoTitle h3.active{
+  color: var(--white);
+}
+
+.border-top , .border-end, .border-bottom, .border-start {
+  border-color: var(--border)  !important;
+}
+
+.bodyWraperContent .title {
+  font-size: 16px;
+  padding: 10px;
+width: 200px;
+  display: flex;
+  justify-content: space-between;
+}
+.bodyWraperContent .description{
+  font-size: 16px;
+  padding: 10px;
+}
+
+.list-group-interest {
+  list-style: none;
+}
+
+
+/* Skills */
+.skillbar {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.skillbar-bar:before {
+  background: #eee;
+  content: "";
+  height: 3px;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+
+.skillbar-bar {
+  height: 3px;
+  width: 0px;
+  background: #323232;
+  transition-property: width, background-color;
+}
+
+.skillbar-title {
+  color: #323232;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.skill-bar-percent {
+  float: right;
+  display: inline-block;
+  color: #323232;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* CENTERING ONLY */
+

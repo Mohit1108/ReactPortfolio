@@ -5,11 +5,10 @@
   --primary: #1c2b3a0a;
   --orange: #fea55f;
   --text: #607b96;
-  --dark: #010C15;
+  --dark: #010c15;
 
   --white: #fff;
-  --border:#1E2D3D;
-
+  --border: #1e2d3d;
 }
 ::-moz-selection {
   background: rgba(255, 255, 255, 0.2);
@@ -46,7 +45,8 @@ body {
 .Footer-brand {
   margin: 0px 50px 0px 0px;
 }
-.main_header nav, .main_footer footer {
+.main_header nav,
+.main_footer footer {
   max-width: 1280px;
   width: 100%;
   margin: auto;
@@ -82,7 +82,7 @@ body {
 
 /* Sections Body  */
 .MainBody {
-  margin-top: 80px;
+  margin-top: 50px;
 }
 
 .heroSection .row {
@@ -121,10 +121,51 @@ body {
   line-height: 20px;
   padding: 3px 0px !important;
 }
-.sidebarAbout i{
+.sidebarAbout i {
   font-size: 24px;
 }
-.sidebarAbout{
+.sidebarAbout {
   width: 70px !important;
   border-right: 1px solid var(--border);
+}
+
+/* Accordian CSS */
+.accordion {
+  background: transparent !important;
+  --bs-accordion-bg: transparent;
+  --bs-accordion-color: var(--white) !important;
+}
+
+.accordion-item {
+  border: none;
+}
+button.accordion-button {
+  background: transparent !important;
+  color: var(--white) !important;
+}
+.accordion-button::after {
+  display: none;
+}
+
+.accordion-button:focus {
+  z-index: 0 !important;
+  border-color: transparent !important;
+  outline: 0;
+  box-shadow: none !important;
+}
+
+.accordion-button:not(.collapsed) {
+  border: none !important;
+  box-shadow: none;
+}
+li.list-group-item {
+  background: none;
+  color: #fff;
+  display: flex;
+  gap: 10px;
+  border: none;
+  padding: 10px 0px;
+}
+code {
+  color: var(--text);
 }

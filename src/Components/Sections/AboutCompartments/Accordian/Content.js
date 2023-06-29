@@ -11,7 +11,7 @@ const Content = ({ tabs, activeTab }) => {
   const activeTabData = tabs.find((tab) => tab.id === activeTab);
 
   return (
-    <div className="bodyWraperContent border-top border-end h-100 p-0">
+    <div className="bodyWraperContent  border-end h-100 p-0">
       {activeTabData && (
         <div className="contantwrapper">
           <h3 className="title border-end m-0">
@@ -21,14 +21,16 @@ const Content = ({ tabs, activeTab }) => {
             <div className="col-md-1 p-0 ">
               <ul className="list-group">
                 {numbers.map((number) => (
-                  <li className="list-group-item px-3 pt-1 pb-0 small" key={number}>
+                  <li
+                    className="list-group-item px-3 pt-1 pb-0 small"
+                    key={number}
+                  >
                     {number}
                   </li>
                 ))}
               </ul>
             </div>
             <div className="col-md-11 p-0">
-              
               <p className=" ">{activeTabData.content}</p>
             </div>
           </div>

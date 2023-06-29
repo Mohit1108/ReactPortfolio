@@ -4,9 +4,8 @@ import SyntaxHighlighter from "react-syntax-highlighter";
 import { dracula } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import TicTacToe from "../TikTok";
 export default function HeroSection() {
-
   return (
-    <div className="MainBody">
+    <div className="MySection justify-content-center mt-5">
       <div className=" heroSection  text-center">
         <div className="row align-items-center justify-content-between ">
           <div className="col-md-6 text-start">
@@ -20,12 +19,16 @@ export default function HeroSection() {
               <SyntaxHighlighter language="javascript" style={dracula}>
                 // you can also see it on my Github page
               </SyntaxHighlighter>
-              <SyntaxHighlighter className="mt-2" language="javascript" style={dracula}>
+              <SyntaxHighlighter
+                className="mt-2"
+                language="javascript"
+                style={dracula}
+              >
                 const githubLink = "https://github.com/Mohit1108"
               </SyntaxHighlighter>
             </div>
           </div>
-          <div className="col-md-6 text-end">
+          <div className="col-md-6 text-end gameToe">
             <TicTacToe></TicTacToe>
             {/* <img className=" w-100" src={HeroImage} alt="HeroImage"></img> */}
           </div>

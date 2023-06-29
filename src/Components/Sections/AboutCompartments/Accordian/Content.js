@@ -30,7 +30,7 @@ const Content = ({ tabs, activeTab }) => {
                 ))}
               </ul>
             </div>
-            <div className="col-md-11 p-0">
+            <div className="col-md-11 p-0 pe-3">
               <p className=" ">{activeTabData.content}</p>
             </div>
           </div>

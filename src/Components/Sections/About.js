@@ -26,8 +26,8 @@ export default function About() {
 
   return (
     <div className="MySection">
-      <div className="row border-top border-bottom">
-        <div className="col-md-1 sidebarAbout ">
+      <div className="row border-top border-bottom m-0">
+        <div className="col-md-1 sidebarAbout p-0 pt-5 justify-content-center d-flex">
           <div className="d-flex flex-column gap-4 ">
             <i className="bi bi-house"></i>
             <i className="bi bi-file-person"></i>
@@ -63,10 +63,10 @@ export default function About() {
 
           <div className="accordion" id="accordionExample"></div>
         </div>
-        <div className="col-md-6 p-0">
+        <div className="col-md-6 p-0 bodyContainerText">
           <Content tabs={data} activeTab={activeTab}></Content>
         </div>
-        <div className="col-md-3">
+        <div className="col-md-3 p-0 GitRepository ">
           <GitHubProfile></GitHubProfile>
         </div>
       </div>

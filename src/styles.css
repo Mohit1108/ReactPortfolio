@@ -17,7 +17,10 @@
 ::selection {
   background: rgba(255, 255, 255, 0.2);
 }
-
+.MainBody {
+  margin-top: 8vh;
+  margin-bottom: 8vh;
+}
 body {
   background-color: #010c15;
   font-family: "Fira Code";
@@ -53,6 +56,7 @@ body {
   padding: 0;
   max-height: 8vh;
   height: 100%;
+  z-index: 999999 !important;
 }
 
 .main_header {
@@ -124,7 +128,6 @@ body {
   font-size: 24px;
 }
 .sidebarAbout {
-  width: 70px !important;
   border-right: 1px solid var(--border);
 }
 
@@ -193,7 +196,7 @@ code {
 .infoTitle h3.active {
   color: var(--white);
 }
-
+.border,
 .border-top,
 .border-end,
 .border-bottom,
@@ -252,18 +255,17 @@ code {
 } */
 .MySection {
   display: flex;
-  /* justify-content: center; */
+  justify-content: center;
   flex-direction: column;
   min-height: 85vh;
 }
-
 .githubData .card {
   background-color: transparent;
   color: var(--white);
 }
 
 .profileImage {
-  width: 50px;
+  width: 40px;
   border-radius: 100px;
   border: 1px solid var(--white);
   padding: 3px;
@@ -285,4 +287,37 @@ code {
 
 ::-webkit-scrollbar-thumb {
   background-color: var(--white);
+}
+
+
+.respeDetails{
+  background-color: #011221;
+  border:1px solid var(--border)  !important;
+  
+}
+
+.repoBtn{
+
+  background-color: var(--border);
+  color: var(--white);
+  padding: 5px 10px;
+  border: none;
+  font-size: 12px;
+
+}
+
+.repoTitle{
+  font-size: 16px;
+  padding: 10px 20px;
+}
+.projectRow{
+  gap: 1%;
+}
+.projectRow .colProject{
+  width: 32%;
+}
+
+.projectRow .card-body {
+  background: var(--dark);
+  color: var(--text);
 }

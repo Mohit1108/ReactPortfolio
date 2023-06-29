@@ -3,12 +3,14 @@ import axios from "axios";
 
 function GitHubRepositories() {
   const [repositories, setRepositories] = useState([]);
+  const [visibleRepositories, setVisibleRepositories] = useState(5);
 
   useEffect(() => {
     async function fetchRepositories() {
       try {
+
         const response = await axios.get(
-          "https://api.github.com/users/Mohit1108/repos?sort=updated&direction=desc&per_page=50"
+          "https://api.github.com/users/Mohit1108/repos?sort=updated&direction=desc"
         );
         setRepositories(response.data);
       } catch (error) {
@@ -16,19 +18,25 @@ function GitHubRepositories() {
       }
     }
 
+  
+
     fetchRepositories();
   }, []);
+  const loadMoreRepositories = () => {
+    setVisibleRepositories(prevVisibleRepositories => prevVisibleRepositories + 5);
+  }
 
   return (
     <div className="githubData">
       {repositories.length > 0 ? (
         <div>
-          <div className="row gap-3 projectSidbar py-4">
-            {repositories.map((repository) => (
-              <div className="col" key={repository.id}>
-                <div className="card border">
+          <h3 className="border-bottom repoTitle border-end m-0">_my_repository</h3>
+          <div className="row gap-3 projectSidbar  m-0">
+            {repositories.slice(0, visibleRepositories).map((repository) => (
+              <div className="col border-bottom p-2" key={repository.id}>
+                <div className="card ">
                   <div className="card-body">
-                    <div className="imageProfie row">
+                    <div className="imageProfie row align-items-center mb-3">
                       <div className="col-md-3">
                         <img
                           className="profileImage"
@@ -36,30 +44,37 @@ function GitHubRepositories() {
                           alt={repository.name}
                         />
                       </div>
-                      <div className="col-md-9 small">
-                        <h3 className=" small">{repository.owner.login}</h3>
-                        <p className="small">
-                          Updated at:
+                      <div className="col-md-9 small ">
+                        <h3 className=" small m-0">{repository.owner.login}</h3>
+                        <p className="small m-0">
+                          _updated_at:
                           {new Date(repository.updated_at).toLocaleDateString()}
                         </p>
                       </div>
                     </div>
-
-                    <h5 className="card-title">{repository.name}</h5>
-                    <h6 className="card-title">
-                      language: {repository.language}
-                    </h6>
-                    <a
-                      href={repository.html_url}
-                      className="btn btn-secondary resetBTn"
-                    >
-                      Visit Repository
-                    </a>
+                    <div className="respeDetails border p-3 rounded">
+                      <h5 className="card-title">{repository.name}</h5>
+                      <h6 className="card-title small">
+                        language: {repository.language}
+                      </h6>
+                      <a
+                        href={repository.html_url}
+                        className="btn btn-secondary repoBtn"
+                      >
+                        Visit Repository
+                      </a>{" "}
+                    </div>
                   </div>
                 </div>
               </div>
             ))}
           </div>
+          {visibleRepositories < repositories.length && (
+            <div className="text-center py-2 border-end border-top loadMore">
+              <button className="btn btn-primary repoBtn" onClick={loadMoreRepositories}>Load More</button>
+            </div>
+          )}
+
         </div>
       ) : (
         <div>Loading...</div>

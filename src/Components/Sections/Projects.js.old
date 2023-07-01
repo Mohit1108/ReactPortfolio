@@ -23,7 +23,7 @@ export default function Projects() {
             <h3 className="small  p-2 m-0 ">_react</h3>
           </div>
           <div className="projectBody border-top p-2">
-            <WebProjects></WebProjects>{" "}
+            <WebProjects></WebProjects>
           </div>
         </div>
       </div>

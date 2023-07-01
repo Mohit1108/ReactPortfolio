@@ -5,7 +5,7 @@ import { dracula } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import TicTacToe from "../TikTok";
 export default function HeroSection() {
   return (
-    <div className="MySection justify-content-center">
+    <div className="MySection justify-content-center" id="profile">
       <div className=" heroSection  text-center">
         <div className="row align-items-center justify-content-between ">
           <div className="col-md-6 text-start">

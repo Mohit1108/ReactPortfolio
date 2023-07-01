@@ -25,7 +25,7 @@ export default function About() {
   };
 
   return (
-    <div className="MySection">
+    <div className="MySection" id="about-me">
       <div className="row border-top border-bottom m-0">
         <div className="col-md-1 sidebarAbout p-0 pt-5 justify-content-center d-flex">
           <div className="d-flex flex-column gap-4 ">

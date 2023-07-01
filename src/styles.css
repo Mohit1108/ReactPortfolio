@@ -207,9 +207,10 @@ code {
 .bodyWraperContent .title {
   font-size: 16px;
   padding: 10px;
-  width: 200px;
+  width: fit-content;
   display: flex;
   justify-content: space-between;
+  gap: 20px;
 }
 .bodyWraperContent .description {
   font-size: 16px;
@@ -243,16 +244,11 @@ code {
   padding: 5px 10px;
 }
 
-.resetBTn:hover {
+.resetBTn:hover, .repoBtn:hover {
   background: var(--orange);
   color: var(--border);
 }
 
-/* .gameToe {
-  background-image: url("../src/Components/assets/BG-Snke.png");
-  background-size: cover;
-  background-position: center;
-} */
 .MySection {
   display: flex;
   justify-content: center;
@@ -311,13 +307,139 @@ code {
   padding: 10px 20px;
 }
 .projectRow{
-  gap: 1%;
+  gap: 2%;
+  row-gap:10px;
+
 }
 .projectRow .colProject{
   width: 32%;
 }
 
 .projectRow .card-body {
+  background: #010c15;
   background: var(--dark);
+  color: #607b96;
   color: var(--text);
+  border-radius: 0px 0px 5px 5px;
+  border: 1px solid #343a40;
 }
+
+ul.TabTitle {
+  list-style: none;
+  padding: 0;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tabsCategory {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+
+
+.MyTabs {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+input[type=checkbox] {
+  /* position: relative; */
+	border: 2px solid #607B96 !important;
+	border-radius: 2px;
+	/* background: none; */
+	cursor: pointer;
+	line-height: 0;
+	margin: 0 .6em 0 0;
+	outline: 0;
+	padding: 0 !important;
+	vertical-align: text-top;
+	height: 16px;
+	width: 16px;
+	-webkit-appearance: none;
+  /* opacity: 0; */
+  background-color: transparent;
+
+}
+
+input[type=checkbox]:hover {
+  opacity: 1; 
+
+    position: relative;
+
+}
+
+input[type=checkbox]:checked {
+    position: relative;
+
+  background-color: #607B96;
+  opacity: 1 !important;
+}
+
+input[type=checkbox]:checked:before {
+  content: '';
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  width: 4px;
+  height: 8px;
+  border: solid #FFF;
+  border-width: 0 2px 2px 0;
+  margin: -1px -1px 0 -1px;
+  transform: rotate(45deg) translate(-50%, -50%);
+  z-index: 2;
+}
+.catName {
+  width: fit-content;
+  display: flex;
+  gap: 20px;
+}
+
+
+.categoryProjectList.p-3 {
+  max-height: 500px !important;
+  overflow-y: scroll;
+}
+
+.projectTitle{
+  font-size: 18px ;
+}
+
+/* Loadder CSS */
+
+
+.loader {
+  margin: 20px 50px;
+  color: #ffffff;
+  width: 3px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  box-shadow: 19px 0 0 7px, 38px 0 0 3px, 57px 0 0 0;
+  transform: translateX(-38px);
+  animation: loader 0.5s infinite alternate linear;
+  -webkit-box-shadow: 19px 0 0 7px, 38px 0 0 3px, 57px 0 0 0;
+  -webkit-transform: translateX(-38px);
+  -webkit-animation: loader 0.5s infinite alternate linear;
+}
+
+@keyframes loader {
+  50% {
+    box-shadow: 19px 0 0 3px, 38px 0 0 7px, 57px 0 0 3px;
+  }
+  100% {
+    box-shadow: 19px 0 0 0, 38px 0 0 3px, 57px 0 0 7px;
+  }
+}
+
+@-webkit-keyframes loader {
+  50% {
+    box-shadow: 19px 0 0 3px, 38px 0 0 7px, 57px 0 0 3px;
+  }
+  100% {
+    box-shadow: 19px 0 0 0, 38px 0 0 3px, 57px 0 0 7px;
+  }
+}
+
+
+/* Loader css end */

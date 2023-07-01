@@ -61,8 +61,8 @@ function GitHubRepositories() {
                         href={repository.html_url}
                         className="btn btn-secondary repoBtn"
                       >
-                        Visit Repository
-                      </a>{" "}
+                        _visit-repository_
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -77,7 +77,7 @@ function GitHubRepositories() {
 
         </div>
       ) : (
-        <div>Loading...</div>
+        <div className="loader"></div>
       )}
     </div>
   );

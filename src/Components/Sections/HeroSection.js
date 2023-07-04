@@ -9,7 +9,7 @@ export default function HeroSection() {
       <div className=" heroSection  text-center">
         <div className="row align-items-center justify-content-between ">
           <div className="col-md-6 text-start">
-            <span className="subTitle"> Hi all, I am</span>
+            <span className="subTitle"> Hi, I am</span>
             <h1 className="Title"> Mohit Goyal</h1>
             <h2 className="subTitleBottom">{">"} Front-end developer</h2>
             <div className="codeHero mt-5">

@@ -29,10 +29,30 @@ export default function About() {
       <div className="row border-top border-bottom m-0">
         <div className="col-md-1 sidebarAbout p-0 pt-5 justify-content-center d-flex">
           <div className="d-flex flex-column gap-4 ">
-            <i className="bi bi-house"></i>
-            <i className="bi bi-file-person"></i>
-            <i className="bi bi-cast"></i>
-            <i className="bi bi-person-lines-fill"></i>
+            <a
+              className=" pe-cursor link-offset-2 link-underline-opacity-0"
+              href="#"
+            >
+              <i className="bi bi-house "></i>
+            </a>
+            <a
+              className="link-offset-2 link-underline-opacity-0 pe-cursor"
+              href="#about-me"
+            >
+              <i className="bi bi-file-person "></i>
+            </a>
+            <a
+              className="link-offset-2 link-underline-opacity-0 pe-cursor"
+              href="#projects"
+            >
+              <i className="bi bi-cast "></i>
+            </a>
+            <a
+              className="link-offset-2 link-underline-opacity-0 pe-cursor"
+              href="#contact"
+            >
+              <i className="bi bi-person-lines-fill "></i>
+            </a>
           </div>
         </div>
 

@@ -1,7 +1,4 @@
 import React, { useState } from "react";
-
-import "bootstrap/dist/css/bootstrap.min.css";
-
 const initialBoard = Array(9).fill(null);
 
 const TicTacToe = () => {
@@ -62,13 +59,27 @@ const TicTacToe = () => {
   let status;
   if (winner) {
     status = winner === "Draw" ? "It's a draw!" : `Player ${winner} wins!`;
+    document.body.style.overflow = "auto";
+    // document.getElementById("about-me").scrollIntoView(true);
   } else {
     status = `Next player Turn: ${isXNext ? "X" : "O"}`;
   }
 
+  const [scrollEnabled, setScrollEnabled] = useState(false);
+    const enablePageScroll = () => {
+    setScrollEnabled(true);
+    var elems = document.getElementsByClassName('MySection');
+    for (var i=0;i<elems.length;i+=1){
+      elems[i].style.display = 'flex';
+    }
+  
+    document.body.style.overflow = "auto";
+    document.getElementById("about-me").scrollIntoView(true);
+  };
+
   return (
     <div className="gameToeBox text-light">
-      <h2 className="text-center">Tik Tic Toe Game</h2>
+      <h2 className="text-center">Tic Tac Toe Game</h2>
       {winner ? (
         <>
           <div className="text-center">{status}</div>
@@ -92,13 +103,20 @@ const TicTacToe = () => {
               {renderSquare(7)}
               {renderSquare(8)}
             </div>
-          </div>{" "}
+          </div>
         </>
       )}
 
-      <div className="text-center mb-4">
-        <button className="btn btn-secondary mt-3 resetBTn" onClick={resetGame}>
+      <div className="text-center my-4 gap-5 d-flex justify-content-center">
+        <button className="btn btn-secondary resetBTn" onClick={resetGame}>
           Restart
+        </button>
+
+        <button
+          className="btn btn-secondary resetBTn small"
+          onClick={enablePageScroll}
+        >
+          skip{" "}
         </button>
       </div>
     </div>

@@ -17,6 +17,14 @@
 ::selection {
   background: rgba(255, 255, 255, 0.2);
 }
+
+.pe-cursor {
+  cursor: pointer;
+}
+
+.sidebarAbout a.pe-cursor{
+  color: var(--text);
+}
 .MainBody {
   margin-top: 8vh;
   margin-bottom: 8vh;
@@ -25,6 +33,7 @@ body {
   background-color: #010c15;
   font-family: "Fira Code";
   color: var(--text);
+  overflow: hidden;
 }
 
 .navbar-brand {
@@ -56,10 +65,12 @@ body {
   padding: 0;
   max-height: 8vh;
   height: 100%;
-  z-index: 999999 !important;
+  
 }
 
 .main_header {
+  z-index: 999999 !important;
+
   width: 100%;
   position: fixed;
   top: 0 !important;
@@ -248,13 +259,20 @@ code {
   background: var(--orange);
   color: var(--border);
 }
+#profile{
+  display: flex;
+}
 
 .MySection {
   display: flex;
   justify-content: center;
   flex-direction: column;
   min-height: 85vh;
+  max-height: 85vh;
+  display: none;
+
 }
+
 .githubData .card {
   background-color: transparent;
   color: var(--white);

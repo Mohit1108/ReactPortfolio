@@ -14,7 +14,7 @@ export default function HeroSection() {
             <h2 className="subTitleBottom">{">"} Front-end developer</h2>
             <div className="codeHero mt-5">
               <SyntaxHighlighter language="javascript" style={dracula}>
-                // complete the game to continue
+                // complete/skip the game to continue website scrolling
               </SyntaxHighlighter>
               <SyntaxHighlighter language="javascript" style={dracula}>
                 // you can also see it on my Github page
@@ -28,7 +28,7 @@ export default function HeroSection() {
               </SyntaxHighlighter>
             </div>
           </div>
-          <div className="col-md-6 text-end gameToe">
+          <div className="col-md-6 text-end gameToe justify-content-center d-flex">
             <TicTacToe></TicTacToe>
             {/* <img className=" w-100" src={HeroImage} alt="HeroImage"></img> */}
           </div>

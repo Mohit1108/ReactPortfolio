@@ -4,7 +4,7 @@ import { dracula } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
 const Content = ({ tabs, activeTab }) => {
   const numbers = [];
-  for (let i = 1; i <= 15; i++) {
+  for (let i = 1; i <= 18; i++) {
     numbers.push(i);
   }
 
@@ -14,7 +14,7 @@ const Content = ({ tabs, activeTab }) => {
     <div className="bodyWraperContent  border-end h-100 p-0">
       {activeTabData && (
         <div className="contantwrapper">
-          <h3 className="title border-end m-0">
+          <h3 className=" catName small p-2 border-end m-0">
             {activeTabData.title} <i className="bi bi-x"></i>
           </h3>
           <div className="row description p-0 m-0 border-top pt-3">

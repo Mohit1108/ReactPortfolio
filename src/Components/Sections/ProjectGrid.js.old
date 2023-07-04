@@ -1,0 +1,76 @@
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+
+const ProjectGrid = () => {
+  const [projects, setProjects] = useState([]);
+  const [filteredProjects, setFilteredProjects] = useState([]);
+  const [categories, setCategories] = useState([]);
+  const [visibleProjects, setVisibleProjects] = useState(3);
+
+  useEffect(() => {
+    // Fetch all projects
+    axios.get('https://mohitgoyal.in/wp-json/wp/v2/project')
+      .then(response => {
+        setProjects(response.data);
+        setFilteredProjects(response.data);
+      })
+      .catch(error => {
+        console.error('Error fetching projects:', error);
+      });
+
+    // Fetch all categories
+    axios.get('https://mohitgoyal.in/wp-json/wp/v2/project-category')
+      .then(response => {
+        setCategories(response.data);
+      })
+      .catch(error => {
+        console.error('Error fetching categories:', error);
+      });
+  }, []);
+
+  const handleCategoryFilter = categoryId => {
+    if (categoryId === 'all') {
+      setFilteredProjects(projects);
+    } else {
+      const filtered = projects.filter(project =>
+        project['project-category'].includes(categoryId)
+      );
+      setFilteredProjects(filtered);
+    }
+    setVisibleProjects(3); // Reset visible projects to initial value
+  };
+
+  const handleLoadMore = () => {
+    setVisibleProjects(prevVisibleProjects => prevVisibleProjects + 3);
+  };
+
+  return (
+    <div>
+      <div>
+        <button onClick={() => handleCategoryFilter('all')}>All</button>
+        {categories.map(category => (
+          <button
+            key={category.id}
+            onClick={() => handleCategoryFilter(category.id)}
+          >
+            {category.name}
+          </button>
+        ))}
+      </div>
+      <div className="project-grid">
+        {filteredProjects.slice(0, visibleProjects).map(project => (
+          <div key={project.id} className="project-card">
+            <img src={project.featured_media.source_url} alt={project.title.rendered} />
+            <h3>{project.title.rendered}</h3>
+            <p>{project.acf.short_description}</p>
+          </div>
+        ))}
+      </div>
+      {visibleProjects < filteredProjects.length && (
+        <button onClick={handleLoadMore}>Load More</button>
+      )}
+    </div>
+  );
+};
+
+export default ProjectGrid;

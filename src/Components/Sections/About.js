@@ -61,7 +61,11 @@ export default function About() {
         <div className="col-md-2 m-0 p-0 infoTitle border-end ">
           <h3
             onClick={togglePersonalInfo}
-            className={personalInfoOpen ? "active" : ""}
+            className={
+              personalInfoOpen
+                ? "active small px-3 py-2 pe-cursor m-0 "
+                : "small px-3 py-2 border-bottom"
+            }
           >
             Personal Info
           </h3>
@@ -75,7 +79,10 @@ export default function About() {
 
           <h3
             onClick={toggleContact}
-            className={"contactTab s " + (contactOpen ? " active" : "")}
+            className={
+              "border-top contactTab pe-cursor small px-3 py-2 mt-5 mb-0" +
+              (contactOpen ? " active" : " border-bottom")
+            }
           >
             Contact
           </h3>

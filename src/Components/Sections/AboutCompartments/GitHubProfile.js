@@ -24,13 +24,14 @@ function GitHubRepositories() {
   }, []);
   const loadMoreRepositories = () => {
     setVisibleRepositories(prevVisibleRepositories => prevVisibleRepositories + 5);
+    
   }
 
   return (
     <div className="githubData">
       {repositories.length > 0 ? (
-        <div>
-          <h3 className="border-bottom repoTitle border-end m-0">_my_repository</h3>
+        <div className="border-end">
+          <h3 className="border-bottom  small p-2  m-0">_my_repository</h3>
           <div className="row gap-3 projectSidbar  m-0">
             {repositories.slice(0, visibleRepositories).map((repository) => (
               <div className="col border-bottom p-2" key={repository.id}>
@@ -71,13 +72,13 @@ function GitHubRepositories() {
           </div>
           {visibleRepositories < repositories.length && (
             <div className="text-center py-2 border-end border-top loadMore">
-              <button className="btn btn-primary repoBtn" onClick={loadMoreRepositories}>Load More</button>
+              <button className="btn btn-primary repoBtn " onClick={loadMoreRepositories}>Load More  <i className="bi bi-arrow-clockwise"></i></button>
             </div>
           )}
 
         </div>
       ) : (
-        <div className="loader"></div>
+        <div className="loader "></div>
       )}
     </div>
   );

@@ -78,8 +78,8 @@ const TicTacToe = () => {
   };
 
   return (
-    <div className="gameToeBox text-light">
-      <h2 className="text-center">Tic Tac Toe Game</h2>
+    <div className="gameToeBox text-light ">
+      <h2 className="text-center gap-2 align-items-center d-flex">Tic Tac Toe <i className="bi bi-controller"></i></h2>
       {winner ? (
         <>
           <div className="text-center">{status}</div>
@@ -108,15 +108,15 @@ const TicTacToe = () => {
       )}
 
       <div className="text-center my-4 gap-5 d-flex justify-content-center">
-        <button className="btn btn-secondary resetBTn" onClick={resetGame}>
-          Restart
+        <button className="btn btn-secondary resetBTn gap-2 align-items-center d-flex" onClick={resetGame}>
+          Restart <i className="bi bi-arrow-repeat"></i>
         </button>
 
         <button
-          className="btn btn-secondary resetBTn small"
+          className="btn btn-secondary resetBTn small gap-2 align-items-center d-flex"
           onClick={enablePageScroll}
         >
-          skip{" "}
+          skip <i className="bi bi-skip-forward"></i>
         </button>
       </div>
     </div>

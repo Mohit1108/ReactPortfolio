@@ -17,9 +17,9 @@ const ProjectTabs = () => {
       });
   }, []);
 
-  const handleCategoryChange = categoryId => {
-    setSelectedCategoryId(categoryId);
-  };
+  // const handleCategoryChange = categoryId => {
+  //   setSelectedCategoryId(categoryId);
+  // };
 
   return (
     <div className="MySection">
@@ -32,7 +32,7 @@ const ProjectTabs = () => {
                   type="checkbox"
                   value={category.id}
                   id="flexCheckChecked"
-                  checked={selectedCategory === category.id}
+                  checked={selectedCategoryId === category.id}
                   onChange={() => handleCategorySelection(category.id)}
                 />
                 <label className="CategoryName " htmlfor="flexCheckChecked">

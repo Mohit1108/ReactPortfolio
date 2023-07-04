@@ -8,7 +8,7 @@ const Title = ({ tabs, activeTab, handleTabClick }) => {
       {tabs.map(tab => (
         <li 
           key={tab.id}
-          className={"list-group-item py-1 small " + (tab.id === activeTab ? ' active ' : '')}
+          className={"list-group-item py-1 small pe-cursor " + (tab.id === activeTab ? ' active ' : '')}
           onClick={() => handleTabClick(tab.id)}
         ><i className="bi bi-folder"></i>
           {tab.title}

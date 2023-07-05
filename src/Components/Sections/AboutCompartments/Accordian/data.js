@@ -1,4 +1,3 @@
-// data.js
 const data = [
   {
     id: 1,
@@ -29,8 +28,9 @@ const data = [
   },
   {
     id: 3,
-    title: "skills",
-    content: ""
+    title: "resume",
+    content:      ''
+
   },
 ];
 

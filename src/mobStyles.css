@@ -117,7 +117,7 @@
         width: 100%;
     }
     .contactTab {
-        margin-top: 20px !important;
+        margin-top: 0px !important;
     }
 
     .number-list {
@@ -228,6 +228,18 @@
 
     footer ul.navbar-nav.ms-auto {
         display: none;
+    }
+
+    .imageProfie .col-md-3, .imageProfie .col-md-9 {
+        width: auto;
+    }.imageProfie {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .catList h3:before {
+        content: 'project';
     }
 }
 

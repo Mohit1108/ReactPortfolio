@@ -35,16 +35,11 @@ const ProjectTabs = () => {
 
   return (
     <div className="MySection " id="projects">
-      <div className="row tabsCategory border-top border-end border-bottom">
-        <div className="col-md-2 m-0 p-0 border-end">
-
-        <div className="border-bottom  ">
-            <h3 className="p-2 m-0 small border-end">
-              _categories_ 
-            </h3>
+      <div className=" tabsCategory border-top border-end border-bottom">
+        <div className="col-md-2 m-0 p-0 border-end catList">
+          <div className="border-bottom  ">
+            <h3 className="p-2 m-0 small border-end">_categories_</h3>
           </div>
-
-
 
           <ul className="TabTitle pe-3 pt-3">
             {categories.map((category) => (
@@ -54,9 +49,7 @@ const ProjectTabs = () => {
                   selectedCategoryId === category.id ? "active" : ""
                 }`}
               >
-                <label
-                  className="form-check-label d-flex justify-content-between"
-                >
+                <label className="form-check-label d-flex justify-content-between">
                   <div className="d-flex justify-content-start align-items-center">
                     <input
                       type="checkbox"
@@ -73,7 +66,7 @@ const ProjectTabs = () => {
             ))}
           </ul>
         </div>
-        <div className="col-md-10 p-0">
+        <div className="col-md-10 p-0 myCatT">
           <div className="border-bottom  ">
             <h3 className="p-2 m-0 small catName border-end">
               {selectedCategoryName} <i className="bi bi-x"></i>
@@ -95,8 +88,6 @@ const ProjectTabs = () => {
           </div>
         </div>
       </div>
-
-      
     </div>
   );
 };

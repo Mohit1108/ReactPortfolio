@@ -8,7 +8,6 @@ function GitHubRepositories() {
   useEffect(() => {
     async function fetchRepositories() {
       try {
-
         const response = await axios.get(
           "https://api.github.com/users/Mohit1108/repos?sort=updated&direction=desc"
         );
@@ -18,14 +17,13 @@ function GitHubRepositories() {
       }
     }
 
-  
-
     fetchRepositories();
   }, []);
   const loadMoreRepositories = () => {
-    setVisibleRepositories(prevVisibleRepositories => prevVisibleRepositories + 5);
-    
-  }
+    setVisibleRepositories(
+      (prevVisibleRepositories) => prevVisibleRepositories + 5
+    );
+  };
 
   return (
     <div className="githubData">
@@ -58,10 +56,7 @@ function GitHubRepositories() {
                       <h6 className="card-title small">
                         language: {repository.language}
                       </h6>
-                      <a
-                        href={repository.html_url}
-                        className="btn"
-                      >
+                      <a href={repository.html_url} className="btn">
                         _visit-repository_
                       </a>
                     </div>
@@ -72,10 +67,11 @@ function GitHubRepositories() {
           </div>
           {visibleRepositories < repositories.length && (
             <div className="text-center py-2 border-end border-top loadMore">
-              <button className="btn  " onClick={loadMoreRepositories}>Load More  <i className="bi bi-arrow-clockwise"></i></button>
+              <button className="btn  " onClick={loadMoreRepositories}>
+                Load More <i className="bi bi-arrow-clockwise"></i>
+              </button>
             </div>
           )}
-
         </div>
       ) : (
         <div className="loader "></div>

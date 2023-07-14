@@ -1,5 +1,4 @@
 import React from "react";
-import HeroImage from "../assets/HeroImage.png";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { dracula } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import TicTacToe from "../TikTok";
@@ -44,7 +43,6 @@ export default function HeroSection() {
           </div>
           <div className="col-md-6 text-end gameToe justify-content-center d-flex">
             <TicTacToe></TicTacToe>
-            {/* <img className=" w-100" src={HeroImage} alt="HeroImage"></img> */}
           </div>
         </div>
       </div>

@@ -22,44 +22,38 @@
   cursor: pointer;
 }
 
-.btn{
+.btn {
   background-color: var(--border);
   color: var(--white);
   padding: 5px 10px;
   border: none;
   font-size: 12px;
-
 }
 
 .btn:hover {
   background: var(--orange);
   color: #1e2d3d;
   color: var(--border);
-
 }
-.solidBtn{
-    background-color: var(--border);
-    color: var(--white);
-    padding: 5px 10px;
-    border: none;
-    font-size: 12px;
-
+.solidBtn {
+  background-color: var(--border);
+  color: var(--white);
+  padding: 5px 10px;
+  border: none;
+  font-size: 12px;
 }
-.solidBig{
-
+.solidBig {
   font-size: 16px;
   padding: 6px 12px;
-
 }
 
-.outlinebtn{
+.outlinebtn {
   background: none;
   padding: 5px 10px;
   font-size: 16px;
   border: 1px solid #6c757d;
   color: var(--white);
 }
-
 
 .sidebarAbout a.pe-cursor {
   color: var(--text);
@@ -102,7 +96,7 @@ body {
   width: 100%;
   margin: auto;
   padding: 0;
-height: 45px;
+  height: 45px;
 }
 
 .main_header {
@@ -218,7 +212,6 @@ li.list-group-item {
 code {
   color: var(--text);
 }
-
 
 .infoTitle .list-group-item {
   color: var(--text);
@@ -496,7 +489,7 @@ input[type="checkbox"]:checked:before {
 }
 .gameToe:before {
   content: "";
-  background-image: url('./Components/assets/Green.png');
+  background-image: url("./Components/assets/Green.png");
   height: 500px;
   width: 500px;
   position: absolute;
@@ -509,7 +502,7 @@ input[type="checkbox"]:checked:before {
 }
 .gameToe:after {
   content: "";
-  background-image: url('./Components/assets/Blue.png');
+  background-image: url("./Components/assets/Blue.png");
   height: 500px;
   width: 500px;
   position: absolute;
@@ -523,10 +516,7 @@ input[type="checkbox"]:checked:before {
   right: 0%;
 }
 
-
-
 /* SKILLS */
-
 
 div.skill-bar {
   margin: 1rem 0 0 0;
@@ -585,14 +575,6 @@ div .l5 {
   }
 }
 
-
-.experience h3{
+.experience h3 {
   font-size: 20px;
-
-}
-
-
-.experience p{
-  
-
 }

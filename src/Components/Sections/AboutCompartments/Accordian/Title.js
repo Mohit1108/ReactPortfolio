@@ -4,7 +4,7 @@ import React from 'react';
 
 const Title = ({ tabs, activeTab, handleTabClick }) => {
   return (
-    <div>
+    <div className='TitleTabsNew'>
           <ul className="list-group px-4 border-top rounded-0 py-2">
       {tabs.map(tab => (
         <li 

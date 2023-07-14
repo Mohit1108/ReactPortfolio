@@ -66,20 +66,22 @@ const TicTacToe = () => {
   }
 
   const [scrollEnabled, setScrollEnabled] = useState(false);
-    const enablePageScroll = () => {
+  const enablePageScroll = () => {
     setScrollEnabled(true);
     // var elems = document.getElementsByClassName('MySection');
     // for (var i=0;i<elems.length;i+=1){
     //   elems[i].style.display = 'flex';
     // }
-  
+
     // document.body.style.overflow = "auto";
     document.getElementById("about-me").scrollIntoView(true);
   };
 
   return (
     <div className="gameToeBox text-light ">
-      <h2 className="text-center gap-2 align-items-center d-flex">Tic Tac Toe <i className="bi bi-controller"></i></h2>
+      <h2 className="text-center gap-2 align-items-center d-flex">
+        Tic Tac Toe <i className="bi bi-controller"></i>
+      </h2>
       {winner ? (
         <>
           <div className="text-center">{status}</div>
@@ -112,10 +114,7 @@ const TicTacToe = () => {
           Restart <i className="bi bi-arrow-repeat"></i>
         </button>
 
-        <button
-          className="btn outlinebtn"
-          onClick={enablePageScroll}
-        >
+        <button className="btn outlinebtn" onClick={enablePageScroll}>
           skip <i className="bi bi-skip-forward"></i>
         </button>
       </div>

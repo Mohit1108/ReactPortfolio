@@ -43,15 +43,27 @@ const ProjectList = ({ categoryId }) => {
             <div key={project.id} className="colProject p-0 m-0">
               <div className="card bg-transparent p-0">
                 <div className="card-body">
-                  <h2 className="card-title projectTitle ">{project.title.rendered}</h2>
+                  <h2 className="card-title projectTitle ">
+                    {project.title.rendered}
+                  </h2>
                   <p className="card-text small">
                     {truncateText(project.acf.short_description, 74)}
                   </p>
-                  <div className="d-flex align-items-center gap-3"> 
-                  <a className="btn gap-2 align-items-center d-flex" href={project.acf.project_link}> <i className="bi bi-eye"></i> preview
-</a>
-                  <a className="btn  gap-2 align-items-center d-flex" href={project.acf.code_link}> <i className="bi bi-code-slash"></i> view-code</a> 
-</div>
+                  <div className="d-flex align-items-center gap-3">
+                    <a
+                      className="btn gap-2 align-items-center d-flex"
+                      href={project.acf.project_link}
+                    >
+                      <i className="bi bi-eye"></i> preview
+                    </a>
+                    <a
+                      className="btn  gap-2 align-items-center d-flex"
+                      href={project.acf.code_link}
+                    >
+                      {" "}
+                      <i className="bi bi-code-slash"></i> view-code
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>

@@ -1,5 +1,4 @@
 import React from "react";
-import "./header.css";
 import myResume from "../assets/Mohit-Goyal-ReactJs-Resume-Final.pdf";
 export default function Header() {
   return (

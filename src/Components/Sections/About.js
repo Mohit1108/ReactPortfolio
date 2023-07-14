@@ -4,7 +4,6 @@ import Contact from "./AboutCompartments/contact";
 import data from "./AboutCompartments/Accordian/data";
 import Title from "./AboutCompartments/Accordian/Title";
 import Content from "./AboutCompartments/Accordian/Content";
-// import Accordion from "./AboutCompartments/Accordian/Accordion";
 import GitHubProfile from "./AboutCompartments/GitHubProfile";
 export default function About() {
   const [activeTab, setActiveTab] = useState(data[0].id);
@@ -47,46 +46,49 @@ export default function About() {
             >
               <i className="bi bi-cast "></i>
             </a>
-            <a
+            {/* <a
               className="link-offset-2 link-underline-opacity-0 pe-cursor"
               href="#contact"
             >
               <i className="bi bi-person-lines-fill "></i>
-            </a>
+            </a> */}
           </div>
         </div>
 
         {/* Personal Info */}
 
         <div className="col-md-2 m-0 p-0 infoTitle border-end ">
-          <h3
-            onClick={togglePersonalInfo}
-            className={
-              personalInfoOpen
-                ? "active small px-3 py-2 pe-cursor m-0 "
-                : "small px-3 py-2 border-bottom"
-            }
-          >
-            Personal Info
-          </h3>
-          {personalInfoOpen && (
-            <Title
-              tabs={data}
-              activeTab={activeTab}
-              handleTabClick={handleTabClick}
-            ></Title>
-          )}
-
-          <h3
-            onClick={toggleContact}
-            className={
-              "border-top contactTab pe-cursor small px-3 py-2 mt-5 mb-0" +
-              (contactOpen ? " active" : " border-bottom")
-            }
-          >
-            Contact
-          </h3>
-          {contactOpen && <Contact></Contact>}
+          <div>
+            <h3
+              onClick={togglePersonalInfo}
+              className={
+                personalInfoOpen
+                  ? "active small px-3 py-2 pe-cursor m-0 "
+                  : "small px-3 py-2 border-bottom"
+              }
+            >
+              Personal Info
+            </h3>
+            {personalInfoOpen && (
+              <Title
+                tabs={data}
+                activeTab={activeTab}
+                handleTabClick={handleTabClick}
+              ></Title>
+            )}
+          </div>
+          <div>
+            <h3
+              onClick={toggleContact}
+              className={
+                "border-top contactTab pe-cursor small px-3 py-2 mt-5 mb-0" +
+                (contactOpen ? " active" : " border-bottom")
+              }
+            >
+              Contact
+            </h3>
+            {contactOpen && <Contact></Contact>}
+          </div>
 
           <div className="accordion" id="accordionExample"></div>
         </div>

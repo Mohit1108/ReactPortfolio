@@ -1,6 +1,4 @@
 import React from "react";
-// import SyntaxHighlighter from "react-syntax-highlighter";
-// import { dracula } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
 const Content = ({ tabs, activeTab }) => {
   const numbers = [];
@@ -18,11 +16,11 @@ const Content = ({ tabs, activeTab }) => {
             {activeTabData.title} <i className="bi bi-x"></i>
           </h3>
           <div className="row description p-0 m-0 border-top pt-3">
-            <div className="col-md-1 p-0 ">
-              <ul className="list-group">
+            <div className="col-md-1 p-0 number-list">
+              <ul className="list-group ">
                 {numbers.map((number) => (
                   <li
-                    className="list-group-item px-3 pt-1 pb-0 small"
+                    className=" list-group-item px-3 pt-1 pb-0 small"
                     key={number}
                   >
                     {number}

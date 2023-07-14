@@ -1,4 +1,3 @@
-import workExperience from "./workExperience";
 const data = [
   {
     id: 1,

@@ -60,7 +60,7 @@ function GitHubRepositories() {
                       </h6>
                       <a
                         href={repository.html_url}
-                        className="btn btn-secondary repoBtn"
+                        className="btn"
                       >
                         _visit-repository_
                       </a>
@@ -72,7 +72,7 @@ function GitHubRepositories() {
           </div>
           {visibleRepositories < repositories.length && (
             <div className="text-center py-2 border-end border-top loadMore">
-              <button className="btn btn-primary repoBtn " onClick={loadMoreRepositories}>Load More  <i className="bi bi-arrow-clockwise"></i></button>
+              <button className="btn  " onClick={loadMoreRepositories}>Load More  <i className="bi bi-arrow-clockwise"></i></button>
             </div>
           )}
 

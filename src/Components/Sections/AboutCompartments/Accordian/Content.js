@@ -1,6 +1,6 @@
 import React from "react";
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { dracula } from "react-syntax-highlighter/dist/esm/styles/hljs";
+// import SyntaxHighlighter from "react-syntax-highlighter";
+// import { dracula } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
 const Content = ({ tabs, activeTab }) => {
   const numbers = [];
@@ -31,7 +31,7 @@ const Content = ({ tabs, activeTab }) => {
               </ul>
             </div>
             <div className="col-md-11 p-0 pe-3">
-              <p className=" ">{activeTabData.content}</p>
+              <div className=" ">{activeTabData.content}</div>
             </div>
           </div>
         </div>

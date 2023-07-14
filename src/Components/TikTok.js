@@ -68,12 +68,12 @@ const TicTacToe = () => {
   const [scrollEnabled, setScrollEnabled] = useState(false);
     const enablePageScroll = () => {
     setScrollEnabled(true);
-    var elems = document.getElementsByClassName('MySection');
-    for (var i=0;i<elems.length;i+=1){
-      elems[i].style.display = 'flex';
-    }
+    // var elems = document.getElementsByClassName('MySection');
+    // for (var i=0;i<elems.length;i+=1){
+    //   elems[i].style.display = 'flex';
+    // }
   
-    document.body.style.overflow = "auto";
+    // document.body.style.overflow = "auto";
     document.getElementById("about-me").scrollIntoView(true);
   };
 
@@ -108,12 +108,12 @@ const TicTacToe = () => {
       )}
 
       <div className="text-center my-4 gap-5 d-flex justify-content-center">
-        <button className="btn btn-secondary resetBTn gap-2 align-items-center d-flex" onClick={resetGame}>
+        <button className="btn outlinebtn" onClick={resetGame}>
           Restart <i className="bi bi-arrow-repeat"></i>
         </button>
 
         <button
-          className="btn btn-secondary resetBTn small gap-2 align-items-center d-flex"
+          className="btn outlinebtn"
           onClick={enablePageScroll}
         >
           skip <i className="bi bi-skip-forward"></i>

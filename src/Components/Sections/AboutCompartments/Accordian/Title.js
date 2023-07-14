@@ -4,7 +4,8 @@ import React from 'react';
 
 const Title = ({ tabs, activeTab, handleTabClick }) => {
   return (
-    <ul className="list-group px-4 border-top rounded-0 py-2">
+    <div>
+          <ul className="list-group px-4 border-top rounded-0 py-2">
       {tabs.map(tab => (
         <li 
           key={tab.id}
@@ -15,6 +16,8 @@ const Title = ({ tabs, activeTab, handleTabClick }) => {
         </li>
       ))}
     </ul>
+
+    </div>
   );
 };
 

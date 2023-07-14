@@ -22,6 +22,45 @@
   cursor: pointer;
 }
 
+.btn{
+  background-color: var(--border);
+  color: var(--white);
+  padding: 5px 10px;
+  border: none;
+  font-size: 12px;
+
+}
+
+.btn:hover {
+  background: var(--orange);
+  color: #1e2d3d;
+  color: var(--border);
+
+}
+.solidBtn{
+    background-color: var(--border);
+    color: var(--white);
+    padding: 5px 10px;
+    border: none;
+    font-size: 12px;
+
+}
+.solidBig{
+
+  font-size: 16px;
+  padding: 6px 12px;
+
+}
+
+.outlinebtn{
+  background: none;
+  padding: 5px 10px;
+  font-size: 16px;
+  border: 1px solid #6c757d;
+  color: var(--white);
+}
+
+
 .sidebarAbout a.pe-cursor {
   color: var(--text);
 }
@@ -33,7 +72,7 @@ body {
   background-color: #010c15;
   font-family: "Fira Code";
   color: var(--text);
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .navbar-brand {
@@ -243,7 +282,7 @@ code {
   border: 1px solid var(--orange);
   color: var(--white);
 }
-
+/* 
 .resetBTn {
   background: none;
   padding: 5px 10px;
@@ -253,7 +292,7 @@ code {
 .repoBtn:hover {
   background: var(--orange);
   color: var(--border);
-}
+} */
 #profile {
   display: flex;
 }
@@ -262,7 +301,7 @@ code {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  display: none;
+  /* display: none; */
   margin-top: 45px;
   margin-bottom: 45px;
   justify-content: center;
@@ -302,13 +341,13 @@ code {
   border: 1px solid var(--border) !important;
 }
 
-.repoBtn {
+/* .repoBtn {
   background-color: var(--border);
   color: var(--white);
   padding: 5px 10px;
   border: none;
   font-size: 12px;
-}
+} */
 
 .repoTitle {
   font-size: 16px;
@@ -544,4 +583,16 @@ div .l5 {
   100% {
     opacity: 100;
   }
+}
+
+
+.experience h3{
+  font-size: 20px;
+
+}
+
+
+.experience p{
+  
+
 }

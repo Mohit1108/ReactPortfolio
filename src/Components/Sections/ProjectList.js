@@ -48,9 +48,9 @@ const ProjectList = ({ categoryId }) => {
                     {truncateText(project.acf.short_description, 74)}
                   </p>
                   <div className="d-flex align-items-center gap-3"> 
-                  <a className="btn btn-primary repoBtn gap-2 align-items-center d-flex" href={project.acf.project_link}> <i className="bi bi-eye"></i> preview
+                  <a className="btn gap-2 align-items-center d-flex" href={project.acf.project_link}> <i className="bi bi-eye"></i> preview
 </a>
-                  <a className="btn btn-primary repoBtn gap-2 align-items-center d-flex" href={project.acf.code_link}> <i className="bi bi-code-slash"></i> view-code</a> 
+                  <a className="btn  gap-2 align-items-center d-flex" href={project.acf.code_link}> <i className="bi bi-code-slash"></i> view-code</a> 
 </div>
                 </div>
               </div>

@@ -1,5 +1,26 @@
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
+    nav .navbar-collapse {
+        background: rgb(0 0 0 / 15%);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        /* margin-top: 30px; */
+        position: absolute;
+        top: 60px;
+        right: 15px;
+    }
+    .navbar-toggler:focus {
+        text-decoration: none;
+        outline: 0;
+        box-shadow:none ;
+        background: #010c15 !important;
+    }
+    .navbar-nav .nav-item a {
+        border: none;
+    }
     .BodyContainer {
         padding: 0px 15px;
         margin-bottom: 100px;

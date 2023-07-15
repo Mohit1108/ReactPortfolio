@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+// import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import ProjectList from "./ProjectList";
 const ProjectTabs = () => {
   const [categories, setCategories] = useState([]);
@@ -37,14 +37,9 @@ const ProjectTabs = () => {
     <div className="MySection " id="projects">
       <div className="row tabsCategory border-top border-end border-bottom">
         <div className="col-md-2 m-0 p-0 border-end">
-
-        <div className="border-bottom  ">
-            <h3 className="p-2 m-0 small border-end">
-              _categories_ 
-            </h3>
+          <div className="border-bottom  ">
+            <h3 className="p-2 m-0 small border-end">_categories_</h3>
           </div>
-
-
 
           <ul className="TabTitle pe-3 pt-3">
             {categories.map((category) => (
@@ -54,9 +49,7 @@ const ProjectTabs = () => {
                   selectedCategoryId === category.id ? "active" : ""
                 }`}
               >
-                <label
-                  className="form-check-label d-flex justify-content-between"
-                >
+                <label className="form-check-label d-flex justify-content-between">
                   <div className="d-flex justify-content-start">
                     <input
                       type="checkbox"

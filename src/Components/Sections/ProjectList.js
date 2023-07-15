@@ -3,7 +3,7 @@ import axios from "axios";
 
 const ProjectList = ({ categoryId }) => {
   const [projects, setProjects] = useState([]);
-  const [visibleProjects, setVisibleProjects] = useState(3); // Number of projects initially visible
+  const [visibleProjects, setVisibleProjects] = useState(6); // Number of projects initially visible
 
   useEffect(() => {
     // Fetch projects by category ID
@@ -14,14 +14,8 @@ const ProjectList = ({ categoryId }) => {
       .then(async (response) => {
         const projectsData = await Promise.all(
           response.data.map(async (project) => {
-            // Fetch the image URL using the image ID
-            const imageResponse = await axios.get(
-              `https://mohitgoyal.in/wp-json/wp/v2/media/${project.featured_media}`
-            );
-            const imageUrl = imageResponse.data?.source_url || "";
             return {
               ...project,
-              featured_image_url: imageUrl,
             };
           })
         );
@@ -31,6 +25,7 @@ const ProjectList = ({ categoryId }) => {
         console.error("Error fetching projects:", error);
       });
   }, [categoryId]);
+
   const loadMoreProjects = () => {
     setVisibleProjects((prevVisibleProjects) => prevVisibleProjects + 3);
   };
@@ -47,17 +42,28 @@ const ProjectList = ({ categoryId }) => {
           {projects.slice(0, visibleProjects).map((project) => (
             <div key={project.id} className="colProject p-0 m-0">
               <div className="card bg-transparent p-0">
-                <img
-                  src={project.featured_image_url}
-                  alt={project.acf.title}
-                  className="card-img-top"
-                />
                 <div className="card-body">
-                  <h2 className="card-title projectTitle ">{project.acf.title}</h2>
+                  <h2 className="card-title projectTitle ">
+                    {project.title.rendered}
+                  </h2>
                   <p className="card-text small">
                     {truncateText(project.acf.short_description, 74)}
                   </p>
-                  <a className="btn btn-primary repoBtn " href={project.link}>view-project</a>
+                  <div className="d-flex align-items-center gap-3">
+                    <a
+                      className="btn gap-2 align-items-center d-flex"
+                      href={project.acf.project_link}
+                    >
+                      <i className="bi bi-eye"></i> preview
+                    </a>
+                    <a
+                      className="btn  gap-2 align-items-center d-flex"
+                      href={project.acf.code_link}
+                    >
+                      {" "}
+                      <i className="bi bi-code-slash"></i> view-code
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>

@@ -1,7 +1,4 @@
 import React, { useState } from "react";
-
-import "bootstrap/dist/css/bootstrap.min.css";
-
 const initialBoard = Array(9).fill(null);
 
 const TicTacToe = () => {
@@ -62,13 +59,29 @@ const TicTacToe = () => {
   let status;
   if (winner) {
     status = winner === "Draw" ? "It's a draw!" : `Player ${winner} wins!`;
+    document.body.style.overflow = "auto";
+    // document.getElementById("about-me").scrollIntoView(true);
   } else {
     status = `Next player Turn: ${isXNext ? "X" : "O"}`;
   }
 
+  const [scrollEnabled, setScrollEnabled] = useState(false);
+  const enablePageScroll = () => {
+    setScrollEnabled(true);
+    // var elems = document.getElementsByClassName('MySection');
+    // for (var i=0;i<elems.length;i+=1){
+    //   elems[i].style.display = 'flex';
+    // }
+
+    // document.body.style.overflow = "auto";
+    document.getElementById("about-me").scrollIntoView(true);
+  };
+
   return (
-    <div className="gameToeBox text-light">
-      <h2 className="text-center">Tik Tic Toe Game</h2>
+    <div className="gameToeBox text-light ">
+      <h2 className="text-center gap-2 align-items-center d-flex">
+        Tic Tac Toe <i className="bi bi-controller"></i>
+      </h2>
       {winner ? (
         <>
           <div className="text-center">{status}</div>
@@ -92,13 +105,17 @@ const TicTacToe = () => {
               {renderSquare(7)}
               {renderSquare(8)}
             </div>
-          </div>{" "}
+          </div>
         </>
       )}
 
-      <div className="text-center mb-4">
-        <button className="btn btn-secondary mt-3 resetBTn" onClick={resetGame}>
-          Restart
+      <div className="text-center my-4 gap-5 d-flex justify-content-center">
+        <button className="btn outlinebtn" onClick={resetGame}>
+          Restart <i className="bi bi-arrow-repeat"></i>
+        </button>
+
+        <button className="btn outlinebtn" onClick={enablePageScroll}>
+          skip <i className="bi bi-skip-forward"></i>
         </button>
       </div>
     </div>

@@ -35,8 +35,13 @@ const ProjectTabs = () => {
 
   return (
     <div className="MySection " id="projects">
+<<<<<<< HEAD
       <div className="row tabsCategory border-top border-end border-bottom">
         <div className="col-md-2 m-0 p-0 border-end">
+=======
+      <div className=" tabsCategory border-top border-end border-bottom">
+        <div className="col-md-2 m-0 p-0 border-end catList">
+>>>>>>> d4cd88a8426c3cdf8bd6c93ce5ccb73a7fb8aa8e
           <div className="border-bottom  ">
             <h3 className="p-2 m-0 small border-end">_categories_</h3>
           </div>
@@ -50,7 +55,11 @@ const ProjectTabs = () => {
                 }`}
               >
                 <label className="form-check-label d-flex justify-content-between">
+<<<<<<< HEAD
                   <div className="d-flex justify-content-start">
+=======
+                  <div className="d-flex justify-content-start align-items-center">
+>>>>>>> d4cd88a8426c3cdf8bd6c93ce5ccb73a7fb8aa8e
                     <input
                       type="checkbox"
                       className="form-check-input"
@@ -60,16 +69,16 @@ const ProjectTabs = () => {
                     {category.name}
                   </div>
 
-                  <span class="badge CatCount">{category.count} </span>
+                  <span className="badge CatCount">{category.count} </span>
                 </label>
               </li>
             ))}
           </ul>
         </div>
-        <div className="col-md-10 p-0">
+        <div className="col-md-10 p-0 myCatT">
           <div className="border-bottom  ">
             <h3 className="p-2 m-0 small catName border-end">
-              {selectedCategoryName} <i class="bi bi-x"></i>
+              {selectedCategoryName} <i className="bi bi-x"></i>
             </h3>
           </div>
           <div className="categoryProjectList p-3">
@@ -88,36 +97,6 @@ const ProjectTabs = () => {
           </div>
         </div>
       </div>
-
-      {/* 
-
-      <Tabs className="tabsCategory border-top border-end">
-        <TabList className="TabTitle border-end pe-3 pt-2 col-md-2">
-          {categories.map((category) => (
-            <div  className="MyTabs" >
-              <Tab key={category.id}>
-                <input 
-                  type="checkbox"
-                  value={category.id}
-                  id="flexCheckChecked"
-                  checked={selectedCategory === category.id}
-                  onChange={() => handleCategorySelection(category.id)}
-                />
-                <label className="CategoryName " htmlfor="flexCheckChecked">
-                  {category.name}
-                </label>
-              </Tab>
-            </div>
-          ))}
-        </TabList>
-        <div className="TabContent  pe-3 pt-3 ps-3">
-          {categories.map((category) => (
-            <TabPanel key={category.id}>
-              <ProjectList categoryId={category.id} />
-            </TabPanel>
-          ))}
-        </div>
-      </Tabs> */}
     </div>
   );
 };

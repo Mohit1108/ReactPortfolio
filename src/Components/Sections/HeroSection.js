@@ -1,20 +1,21 @@
 import React from "react";
-import HeroImage from "../assets/HeroImage.png";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { dracula } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import TicTacToe from "../TikTok";
+import myResume from "../assets/Mohit-Goyal-ReactJs-Resume-Final.pdf";
+
 export default function HeroSection() {
   return (
     <div className="MySection justify-content-center" id="profile">
       <div className=" heroSection  text-center">
         <div className="row align-items-center justify-content-between ">
           <div className="col-md-6 text-start">
-            <span className="subTitle"> Hi all, I am</span>
+            <span className="subTitle"> Hi, I am</span>
             <h1 className="Title"> Mohit Goyal</h1>
             <h2 className="subTitleBottom">{">"} Front-end developer</h2>
             <div className="codeHero mt-5">
               <SyntaxHighlighter language="javascript" style={dracula}>
-                // complete the game to continue
+                // complete/skip the game to continue website
               </SyntaxHighlighter>
               <SyntaxHighlighter language="javascript" style={dracula}>
                 // you can also see it on my Github page
@@ -27,10 +28,21 @@ export default function HeroSection() {
                 const githubLink = "https://github.com/Mohit1108"
               </SyntaxHighlighter>
             </div>
+            <div className="myLinks gap-3 d-flex mt-5">
+              <a href={myResume} className="btn solidBtn solidBig">
+                _resume              <i className="bi bi-file-earmark-person-fill"></i>
+
+              </a>
+              <a
+                href="https://www.linkedin.com/in/mohitgoyal1108/"
+                className="btn solidBtn solidBig"
+              >
+                _linkedIn <i className="bi bi-linkedin"></i>
+              </a>
+            </div>
           </div>
-          <div className="col-md-6 text-end gameToe">
+          <div className="col-md-6 text-end gameToe justify-content-center d-flex">
             <TicTacToe></TicTacToe>
-            {/* <img className=" w-100" src={HeroImage} alt="HeroImage"></img> */}
           </div>
         </div>
       </div>

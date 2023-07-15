@@ -21,17 +21,17 @@ export default function Footer() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent2">
             <ul className="firstBar navbar-nav  mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link " href="#">
+                <a className="nav-link " href="https://www.instagram.com/itz_mohit.goyal/">
                 <i className="bi bi-instagram"></i>
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" href="https://www.linkedin.com/in/mohitgoyal1108/">
                 <i className="bi bi-linkedin"></i>
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" href="https://facebook.com/mohitgoyal1108">
                 <i className="bi bi-facebook"></i>
                 </a>
               </li>
@@ -39,7 +39,7 @@ export default function Footer() {
 
             <ul className=" navbar-nav ms-auto">
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" href="https://github.com/Mohit1108">
                   @Mohit1108 <i className="bi bi-github"></i>
                 </a>
               </li>

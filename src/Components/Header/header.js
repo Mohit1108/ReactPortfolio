@@ -1,8 +1,8 @@
-import React from 'react'
-import "./header.css"
+import React from "react";
+import myResume from "../assets/Mohit-Goyal-ReactJs-Resume-Final.pdf";
 export default function Header() {
   return (
-    <div className='main_header'>
+    <div className="main_header">
       <nav className="navbar navbar-expand-lg navbar-dark ">
         <div className="container-fluid">
           <a className="navbar-brand" href="/">
@@ -22,7 +22,11 @@ export default function Header() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="firstBar navbar-nav  mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#profile">
+                <a
+                  className="nav-link active"
+                  aria-current="page"
+                  href="#profile"
+                >
                   _profile
                 </a>
               </li>
@@ -38,18 +42,16 @@ export default function Header() {
               </li>
             </ul>
 
-            
-            <ul className=' navbar-nav ms-auto'>             <li className="nav-item">
-                <a className="nav-link" href="#">
-                  _contact
+            <ul className=" navbar-nav ms-auto">
+              <li className="nav-item">
+                <a className="nav-link" href={myResume}>
+                  _resume
                 </a>
               </li>
-</ul>
-
-
+            </ul>
           </div>
         </div>
       </nav>
     </div>
-  )
+  );
 }
